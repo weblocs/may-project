@@ -747,12 +747,12 @@ function drawFavItem(e) {
     let url = "";
     let label = "";
     let icon =
-      type != "green"
+      type !== "green"
         ? "https://assets-global.website-files.com/6238640c74e61b4d447f965f/625b6e90d5da03ed9cf4f2d3_right%20icon%20-%20small.svg"
         : "https://assets-global.website-files.com/6238640c74e61b4d447f965f/623e3545aa6e8ebc198ae0a4_right%20icon%20-%20small.svg";
     type =
-      type == "green" ? "car-details-driveway-button" : "gc-fav-driveway-btn";
-    if (e.preOrderUrl != "") {
+      type === "green" ? "car-details-driveway-button" : "gc-fav-driveway-btn";
+    if (e.preOrderUrl !== "") {
       url = e.preOrderUrl;
       label = "Pre-order";
     } else {
@@ -1151,7 +1151,9 @@ function initCheckboxBinding(id) {
       return el.id != id;
     });
   }
-
+  if (compareData.length === 0) {
+    initCompareBar();
+  }
   if (compareData.length <= 0) {
     return;
   }
