@@ -167,7 +167,7 @@ ${createCompareItem("Seats", drawCarSeats, compareData)}
 
     <div class="card-compare-environ">
         <div class="compare--header lightgreen--border-bottom">
-            Environmental impact
+          Sustainability
         </div>
         <div class="compare-environ--content">
             ${createCompareItem(
@@ -181,7 +181,7 @@ ${createCompareItem("Seats", drawCarSeats, compareData)}
               compareData
             )}
             <div class="compare--item-header">
-                <div>Environmental impact score</div>
+                <div>Sustainability score</div>
             </div>
             <div class="compare-environscore--content">
                 <div class="environscore--label gc-clear">${drawCarEnvironmentScore(
@@ -651,7 +651,7 @@ function drawFavItem(e) {
 
             <div class="card-details-section">
                 <div class="card-details-header green">
-                    <div>Environmental Impact</div>
+                    <div>Sustainability Impact</div>
                 </div>
                 ${drawCarDetailRow({
                   label: "Annual CO2 emissions",
