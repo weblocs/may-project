@@ -167,7 +167,7 @@ ${createCompareItem("Seats", drawCarSeats, compareData)}
 
     <div class="card-compare-environ">
         <div class="compare--header lightgreen--border-bottom">
-          Sustainability
+            Environmental impact
         </div>
         <div class="compare-environ--content">
             ${createCompareItem(
@@ -181,7 +181,7 @@ ${createCompareItem("Seats", drawCarSeats, compareData)}
               compareData
             )}
             <div class="compare--item-header">
-                <div>Sustainability score</div>
+                <div>Environmental impact score</div>
             </div>
             <div class="compare-environscore--content">
                 <div class="environscore--label gc-clear">${drawCarEnvironmentScore(
@@ -651,7 +651,7 @@ function drawFavItem(e) {
 
             <div class="card-details-section">
                 <div class="card-details-header green">
-                    <div>Sustainability Impact</div>
+                    <div>Environmental Impact</div>
                 </div>
                 ${drawCarDetailRow({
                   label: "Annual CO2 emissions",
@@ -747,12 +747,12 @@ function drawFavItem(e) {
     let url = "";
     let label = "";
     let icon =
-      type !== "green"
+      type != "green"
         ? "https://assets-global.website-files.com/6238640c74e61b4d447f965f/625b6e90d5da03ed9cf4f2d3_right%20icon%20-%20small.svg"
         : "https://assets-global.website-files.com/6238640c74e61b4d447f965f/623e3545aa6e8ebc198ae0a4_right%20icon%20-%20small.svg";
     type =
-      type === "green" ? "car-details-driveway-button" : "gc-fav-driveway-btn";
-    if (e.preOrderUrl !== "") {
+      type == "green" ? "car-details-driveway-button" : "gc-fav-driveway-btn";
+    if (e.preOrderUrl != "") {
       url = e.preOrderUrl;
       label = "Pre-order";
     } else {
@@ -1151,9 +1151,7 @@ function initCheckboxBinding(id) {
       return el.id != id;
     });
   }
-  if (compareData.length === 0) {
-    initCompareBar();
-  }
+
   if (compareData.length <= 0) {
     return;
   }
@@ -1526,7 +1524,7 @@ function constructDataObj(id, e) {
     bodyType: $('[fs-cmsfilter-field="body"]', lineItem).html(),
     greenScore: $('[fs-cmsfilter-field="new-green-score"]', lineItem).html(),
     electricRange: $('[fs-cmsfilter-field="electric-range"]', lineItem).html(),
-    totalRange: $('[fs-cmsfilter-field="range"]', lineItem).html(),
+    totalRange: $('[fs-cmsfilter-field="total-range"]', lineItem).html(),
     mpg: $('[fs-cmsfilter-field="mpg"]', lineItem).html(),
     speed: $('[fs-cmsfilter-field="speed"]', lineItem).html(),
     batteryCap: $('[fs-cmsfilter-field="battery"]', lineItem).html(),
